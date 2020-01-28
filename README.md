@@ -1,68 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather app
 
-## Available Scripts
+This app was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), and uses [@material-ui](https://material-ui.com), [apisauce](https://github.com/infinitered/apisauce), [autosuggest-highlight](https://github.com/moroshko/autosuggest-highlight), and [lodash.throttle](https://www.npmjs.com/package/lodash.throttle)
 
-In the project directory, you can run:
+The server is written in Node using [Express](https://expressjs.com/), [cors](https://www.npmjs.com/package/cors), and [Mongoose](https://mongoosejs.com), to connect to a [MongoDB](https://www.mongodb.com) database.
 
-### `yarn start`
+The email script uses [emailjs](https://www.npmjs.com/package/emailjs), the [darksky API](https://darksky.net/dev), and [Google Geocoder](https://developers.google.com/maps/documentation/geocoding/start)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Configuration
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If you do not have MongoDB installed to run the app locally, you can do so by following the instructions [here](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials);
 
-### `yarn test`
+Once mongo is installed, run `mongod` to start the db.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a .env file in the root folder and add the keys `REACT_APP_GOOGLE_API_KEY=YOUR_API_KEY` and `DARK_SKY_API_KEY=YOUR_API_KEY`. To generate API keys for these services, go to the [Google Cloud Developer Console](https://console.cloud.google.com/google/maps-apis/overview), and click "All Google Maps APIs", then enable the Geocoding API, the Maps JavaScript API, and the Places API, then follow the steps [here](https://developers.google.com/maps/documentation/javascript/get-api-key#get-the-api-key) here to generate an API key. For the Dark Sky API, all you need to do is create an account [here](https://darksky.net/dev) and it will generate an API key for you.
 
-### `yarn build`
+Finally, install dependencies using `npm install`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Startup
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To run the production built app and server, use `npm run server` and visit localhost:3001. `npm start` will run just the client app in dev mode at localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To run the script, use `npm run email`;
