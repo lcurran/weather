@@ -12,12 +12,12 @@ If you do not have MongoDB installed to run the app locally, you can do so by fo
 
 Once mongo is installed, run `mongod` to start the db.
 
-Create a .env file in the root folder and add the keys `REACT_APP_GOOGLE_API_KEY=YOUR_API_KEY` and `DARK_SKY_API_KEY=YOUR_API_KEY`. To generate API keys for these services, go to the [Google Cloud Developer Console](https://console.cloud.google.com/google/maps-apis/overview), and click "All Google Maps APIs", then enable the Geocoding API, the Maps JavaScript API, and the Places API, then follow the steps [here](https://developers.google.com/maps/documentation/javascript/get-api-key#get-the-api-key) here to generate an API key. For the Dark Sky API, all you need to do is create an account [here](https://darksky.net/dev) and it will generate an API key for you.
+Create a .env file in the root folder and add the keys `REACT_APP_GOOGLE_API_KEY=YOUR_API_KEY` and `DARK_SKY_API_KEY=YOUR_API_KEY`. For the Google API key, please use the key supplied via email. For the Dark Sky API, all you need to do is create an account [here](https://darksky.net/dev) and it will generate an API key for you.
 
 Finally, install dependencies using `npm install`.
 
 ## Startup
 
-To run the production built app and server, use `npm run server` and visit localhost:3001. `npm start` will run just the client app in dev mode at localhost:3000.
+To run the production built app and server, use `npm start` and visit localhost:3001. `npm run react` will run just the client app in dev mode at localhost:3000.
 
 To run the script, use `npm run email`;

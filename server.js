@@ -33,4 +33,4 @@ const routes = require('./server/routes');
 app.get('/api', (req, res) => res.send('Hello World with Express'));
 app.use('/api/users', routes);
 
-app.listen(port, () => console.log('Running API on port ' + port));
+app.listen(port, () => console.log('Running app on port ' + port));
